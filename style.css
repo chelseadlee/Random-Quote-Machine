@@ -1,0 +1,28 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+#button,
+#social-section {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid black;
+    margin: 2em auto;
+    display: block;
+}
+#quote-content {
+   margin: 1em auto;
+   padding: 10px;
+   max-width: 300px;
+   height: auto;
+   border: 1px solid black;
+}
+#quote,
+#author {
+    text-align: justify;
+}
+
+
+#button:hover {
+    background-color: black;
+    color: #fff;
+}

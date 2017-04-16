@@ -1,10 +1,14 @@
 var url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?";
 
 var showRandQuote = function(data) {
-    $("#quote").text(data.quoteText);
-    $("#author").text(data.quoteAuthor);
+    $("#quote").html("<p>" + data.quoteText + "</p>");
+    $("#author").html("<p>" + data.quoteAuthor + "</p>");
 };
 
+
+$(document).ready(function() {
+    $.getJSON(url, showRandQuote);
+});
 
 $("#button").click(function() {
     $.getJSON(url, showRandQuote);

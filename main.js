@@ -17,34 +17,3 @@ $(document).ready(function() {
 $("#button").click(function() {
     $.getJSON(url, showRandQuote);
 });
-    // var currentQuote = "", currentAuthor = "";
-    // // $("#button").on("click", getRandomQuote);
-
-    // function getRandomQuote() {
-    //     $.ajax({
-    //         url: url,
-    //         data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
-    //         success: function(response) {
-    //             $("#quote").html("<p>" + response.quoteText + "<br>" + response.quoteAuthor + "</p>");
-    //             var r = JSON.parse(response);
-    //             currentQuote = response.quoteText;
-    //             currentAuthor = response.quoteAuthor;
-    //             console.log(currentAuthor + " " + currentQuote);
-    //         }
-    //     });
-
-
-    // };
-
-
-
-// var tweetIt = function() {
-//     var phrase = document.getElementById('result').innerText;
-//     var tweetUrl = 'https://twitter.com/share?text=' +
-//         randQuote +
-//         '.' +
-//         '&url=' +
-//         'http://www.cookbooktitlegenerator.com/';
-
-//     window.open(tweetUrl);
-// };

@@ -1,8 +1,12 @@
 var url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?";
 
 var showRandQuote = function(data) {
-    $("#quote").html("<p>" + data.quoteText + "</p>");
-    $("#author").html("<p>" + data.quoteAuthor + "</p>");
+    var quote = data.quoteText;
+    var author = data.quoteAuthor || "Anonymous";
+    $("#quote").html("<p>" + quote + "</p>");
+    $("#author").html("<p>" + author + "</p>");
+    var randQuote = encodeURIComponent(quote + " - " + author);
+    $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=" + randQuote);
 };
 
 
@@ -31,7 +35,16 @@ $("#button").click(function() {
 
 
     // };
-    // var randQuote = currentQuote + " - " + currentAuthor;
-    // // $(".twitter-share-button").attr("data-text", quote);
 
 
+
+// var tweetIt = function() {
+//     var phrase = document.getElementById('result').innerText;
+//     var tweetUrl = 'https://twitter.com/share?text=' +
+//         randQuote +
+//         '.' +
+//         '&url=' +
+//         'http://www.cookbooktitlegenerator.com/';
+
+//     window.open(tweetUrl);
+// };

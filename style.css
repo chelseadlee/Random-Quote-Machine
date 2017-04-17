@@ -1,13 +1,24 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
 }
-#button,
-#social-section {
-    text-decoration: none;
+.button
+ {
     background-color: #fff;
     border: 1px solid black;
     margin: 2em auto;
     display: block;
+    transition: all .4s ease-in-out;
+
+}
+.tweet {
+    width: 50px;
+    text-align: center;
+    padding: .5em;
+
+}
+.tweet a {
+    text-decoration: none;
+    color: black;
 }
 #quote-content {
    margin: 1em auto;
@@ -22,7 +33,9 @@
 }
 
 
-#button:hover {
+.button:hover,
+a:hover {
     background-color: black;
     color: #fff;
+    transition: all .4s ease-in-out;
 }
